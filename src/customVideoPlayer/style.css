@@ -1,0 +1,151 @@
+/* Global styles */
+body {
+    background: purple;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Video container */
+  .video-container {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 50rem;
+    height: 87vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Fullscreen mode */
+  .fullscreen-active {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Video wrapper */
+  .video-wrapper {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    background: black;
+  }
+  .fullscreen-active .video-wrapper {
+    height: 100vh; /* Full screen height */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-active .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  /* Fullscreen wrapper */
+  .fullscreen-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  /* Progress bar */
+  .progress-bar {
+    width: 100%;
+    margin: 10px 0;
+    accent-color: #4B164C;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 97.5%;
+    border-radius: 0 0 10px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  
+  /* Bottom Controls (Play, Volume, Fullscreen) */
+  .bottom-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Hide controls in fullscreen mode after inactivity */
+  .controls.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .controls.visible {
+    opacity: 1;
+  }
+  
+  /* Fullscreen controls */
+  .fullscreen-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Left-side controls (Mute & Volume) */
+  .left-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .center-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+  }
+
+  
+  /* Buttons */
+  .control-btn, .play-btn, .fullscreen-btn, .skip-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .control-btn:hover, .play-btn:hover, .fullscreen-btn:hover, .skip-btn:hover {
+    color: #4B164C;
+  }
+  
+  /* Play button */
+  .play-btn {
+    font-size: 2rem;
+    margin: 0 20px;
+  }
+  
+  /* Volume slider */
+  .volume-slider {
+    width: 100px;
+    accent-color: #4B164C;
+  }
+  
